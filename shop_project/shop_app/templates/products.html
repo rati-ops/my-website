@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>პროდუქტები</h1>
+   
+
+   {% for product in products %}
+        <h2>{{ product.name }}</h2>
+        <p>რეიტინგი: {{ product.price }}</p>
+
+        {% if product.price > 500 %}
+            <p>ძვირადღირებული პროდუქტია</p>
+        {% else %}
+            <p>ბიუჯეტური პროდუქტია</p>
+        {% endif %}
+
+    {% endfor %}
+
+    
+
+
+
+    <h2>ჩვენი პროდუქტები</h2>
+    <p>აქ არის მაღაზიის პროდუქტები.</p>
+{% endblock %}
+
+
